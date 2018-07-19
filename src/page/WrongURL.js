@@ -5,26 +5,30 @@ const WrongURL = ()=>(
     <div style={
       {
         width:'100%',
-        height:'370px',
-        position:'static',
-        top:'0px',
-        right:'0px',
+        height:'370px'
       }
     }>
       <div style={
         {
           width:'100%',
-          height:'100%',
-          position
+          height:'50%',
+          background:'DarkSlateGray'
+        }
+      }>
+      </div>
+      <div style={
+        {
+          width:'100%',
+          height:'50%',
+          background:'DarkSlateBlue'
         }
       }>
       </div>
     </div>
-    <img style={{height:'370px'}} src="http://placehold.it/1200x670"/>
     <Grid>
       <Row>
         <Col>
-          <Image src="http://placehold.it/1200x300"/>
+          <Image src="http://placehold.it/1200x300" responsive/>
         </Col>
       </Row>
       <Row>
