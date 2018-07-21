@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Col, Row, Image, Form, FormGroup, FormControl, ControlLabel, HelpBlock, Button} from 'react-bootstrap';
+import {Grid, InputGroup, Col, Row, Image, FormGroup, FormControl, ControlLabel, HelpBlock, Button} from 'react-bootstrap';
 import './index.css';
 import earth from './earth.svg';
 import mars from './mars.svg';
@@ -8,6 +8,7 @@ import moon from './moon.svg';
 import rocket from './space_rocket.svg';
 import uranus from './uranus.svg';
 import logo from './logo.svg';
+import textBox from './text_box.png';
 
 export default class WrongURL extends React.Component{
   constructor(props){
@@ -173,25 +174,39 @@ export default class WrongURL extends React.Component{
             <img alt="" className="js-plaxify" data-xrange="30" data-yrange="10" height="180" id="parallax_uranus" width="180" src={uranus}/>
             <img alt="" className="js-plaxify" data-invert="true" data-xrange="50" data-yrange="20" height="100" id="parallax_earth" width="100" src={earth}/>
             <img alt="" className="js-plaxify" data-invert="true" data-xrange="150" data-yrange="30" height="50" id="parallax_moon" width="50" src={moon}/>
+            <img alt="" className="js-plaxify" data-xrange="10" data-yrange="10" height="80" width="320" id="parallax_text" src={textBox}/>
           </div>
         </div>
         <Grid>
+          <Row id="margin_below_banner">
+          </Row>
           <Row>
-            <Col>
-            <Form>
+            <Col xs={8} xsOffset={2}>
+            <form>
               <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
-                <ControlLabel>Working example with validation</ControlLabel>
-                <FormControl type="text" value={this.state.value} placeholder="Enter text" onChange={this.handleChange}/>
-                <FormControl.Feedback />
-                <HelpBlock>Validation is based on string length.</HelpBlock>
+                <ControlLabel>템플릿을 검색하세요</ControlLabel>
+                <InputGroup>
+                  <FormControl type="text" value={this.state.value} placeholder="Enter text" onChange={this.handleChange}/>
+                  <FormControl.Feedback />
+                  <InputGroup.Button>
+                    <Button type="submit">Submit</Button>
+                  </InputGroup.Button>
+                </InputGroup>
+                <HelpBlock>문자열의 길이를 검사합니다.</HelpBlock>
               </FormGroup>
-              <Button type="submit">Submit</Button>
-            </Form>
+            </form>
             </Col>
           </Row>
           <Row>
-            <Col sm={2} smOffset={5}>
-              <Image src={logo} responsive/>
+            <Col xs={4} xsOffset={4} sm={2} smOffset={5}>
+              <a href="/"><Image src={logo} responsive/></a>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <hr/>
+              <h4>시차(Parallax) 효과</h4>
+              <p>페이지 상단 부분은 마우스를 움직이면 안의 요소들이 함께 움직이며 시차를 표현합니다.</p>
             </Col>
           </Row>
         </Grid>

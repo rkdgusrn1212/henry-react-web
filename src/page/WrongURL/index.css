@@ -206,6 +206,11 @@ only screen and (                min-resolution: 2dppx) {
   left: 356px;
   z-index: 9;
 }
+#parallax_illustration #parallax_text {
+  top: 240px;
+  left: 420px;
+  z-index: 11;
+}
 #parallax_illustration #parallax_uranus {
   top: 150px;
   left: 432px;
@@ -220,4 +225,16 @@ only screen and (                min-resolution: 2dppx) {
   top: 113px;
   left: 762px;
   z-index: 4;
+}
+#margin_below_banner{
+  height: 40px;
+}
+hr{
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
 }
