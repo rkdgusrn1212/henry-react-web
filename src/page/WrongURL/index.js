@@ -34,6 +34,7 @@ export default class WrongURL extends React.Component{
 
 
   componentDidMount(){
+    /*깃 허브 404 페이지를 참조.*/
     !function(t){
       function n(t){
         var n=[0,0,0],r=t.css("-webkit-transform")||t.css("-moz-transform")||t.css("-ms-transform")||t.css("-o-transform")||t.css("transform");
@@ -178,7 +179,7 @@ export default class WrongURL extends React.Component{
           </div>
         </div>
         <Grid>
-          <Row id="margin_below_banner">
+          <Row id="content-top">
           </Row>
           <Row>
             <Col xs={8} xsOffset={2}>
@@ -207,7 +208,15 @@ export default class WrongURL extends React.Component{
               <hr/>
               <h4>시차(Parallax) 효과</h4>
               <p>페이지 상단 부분은 마우스를 움직이면 안의 요소들이 함께 움직이며 시차를 표현합니다.</p>
+              <p className="opensource_library">오픈소스 라이브러리 :
+                <a href="https://github.com/cameronmcefee/plax">
+                  https://github.com/cameronmcefee/plax
+                </a>
+                &nbsp;(MIT License)
+              </p>
             </Col>
+          </Row>
+          <Row id="content-bottom">
           </Row>
         </Grid>
       </React.Fragment>
